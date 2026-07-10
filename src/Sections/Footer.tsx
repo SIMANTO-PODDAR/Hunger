@@ -59,7 +59,7 @@ const Footer = () => {
                         <ul className="space-y-3">
                             {[
                                 { label: "FAQ", href: "/#FAQ" },
-                                { label: "Contact", href: "/#Contact" },
+                                { label: "Contact", href: "/contact" },
                                 { label: "Our Outlets", href: "/#Outlets" },
                                 { label: "Privacy Policy", href: "/#PrivacyPolicy" },
                                 { label: "Trending Meals", href: "/TODO" },

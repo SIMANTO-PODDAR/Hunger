@@ -46,7 +46,7 @@ const AboutPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <BrowseFoodsBtn />
               <Link
-                href="/#Contact"
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-heading bg-white border border-border rounded-xl hover:bg-gray-50 transition-colors duration-200"
               >
                 Contact
@@ -221,27 +221,6 @@ const AboutPage: React.FC = () => {
       </section>
 
       <WhyChooseHunger />
-
-      {/* Call to Action Section */}
-      <section className="py-10 lg:py-25 bg-alternate">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl border border-border shadow-sm p-10 sm:p-16 lg:p-20 text-center relative overflow-hidden">
-            <div className="relative z-10 max-w-2xl mx-auto">
-              <h2 className="text-4xl sm:text-5xl font-bold text-heading mb-6">
-                Ready to discover your next favorite meal?
-              </h2>
-              <p className="text-lg text-body mb-10 leading-relaxed">
-                Browse hundreds of fresh, quality meals from trusted local sellers.
-                Your perfect dish is just a few clicks away.
-              </p>
-              <BrowseFoodsBtn />
-            </div>
-            {/* Decorative background shapes */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-lightGreen rounded-full opacity-50 blur-3xl -z-10" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-lightGreen rounded-full opacity-50 blur-3xl -z-10" />
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

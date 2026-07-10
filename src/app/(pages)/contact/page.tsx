@@ -1,7 +1,7 @@
-
+import BrowseFoodsBtn from '@/Components/BrowseFoodsBtn';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
-const Contact: React.FC = () => {
+const ContactPage: React.FC = () => {
 
     const contactCards = [
         {
@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
     ];
 
     return (
-        <section id='Contact' className="w-full bg-white py-16 md:py-24">
+        <section id='Contact' className="w-full bg-white py-5 md:py-10">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16">
@@ -145,8 +145,29 @@ const Contact: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Call to Action Section */}
+            <section className="py-10 lg:py-25 bg-alternate">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="bg-white rounded-3xl border border-border shadow-sm p-10 sm:p-16 lg:p-20 text-center relative overflow-hidden">
+                        <div className="relative z-10 max-w-2xl mx-auto">
+                            <h2 className="text-4xl sm:text-5xl font-bold text-heading mb-6">
+                                Ready to discover your next favorite meal?
+                            </h2>
+                            <p className="text-lg text-body mb-10 leading-relaxed">
+                                Browse hundreds of fresh, quality meals from trusted local sellers.
+                                Your perfect dish is just a few clicks away.
+                            </p>
+                            <BrowseFoodsBtn />
+                        </div>
+                        {/* Decorative background shapes */}
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-lightGreen rounded-full opacity-50 blur-3xl -z-10" />
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-lightGreen rounded-full opacity-50 blur-3xl -z-10" />
+                    </div>
+                </div>
+            </section>
         </section>
     );
 };
 
-export default Contact;
+export default ContactPage;

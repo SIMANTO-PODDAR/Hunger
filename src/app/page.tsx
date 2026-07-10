@@ -1,4 +1,3 @@
-import Contact from "@/Sections/Contact";
 import FAQ from "@/Sections/FAQ";
 import Hero from "@/Sections/Hero";
 import OurOutlets from "@/Sections/OurOutlets";
@@ -11,7 +10,6 @@ export default function Home() {
       <Hero />
       <WhyChooseHunger />
       <OurOutlets />
-      <Contact />
       <FAQ />
       <PrivacyPolicy />
     </div>

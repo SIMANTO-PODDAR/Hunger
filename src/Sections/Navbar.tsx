@@ -67,6 +67,7 @@ const NavLinks = ({ loggedIn }: NavLinksProps) => {
         <>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
             <li><Link href="/TODO">All Foods</Link></li>
 
             {loggedIn && (
