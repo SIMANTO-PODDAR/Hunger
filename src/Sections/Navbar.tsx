@@ -3,6 +3,10 @@ import Logo from "../../public/hunger.png";
 import { AiOutlineLogin, AiOutlineLogout } from "react-icons/ai";
 import Link from "next/link";
 
+type NavLinksProps = {
+    loggedIn: boolean;
+};
+
 const Navbar = () => {
     const loggedIn = true;
     // const loggedIn = false;
@@ -19,17 +23,7 @@ const Navbar = () => {
                         <ul
                             tabIndex={-1}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li><Link href='/'>Home</Link></li>
-                            <li><a>All Foods</a></li>
-                            <li><a>About</a></li>
-                            {
-                                loggedIn && (
-                                    <>
-                                        <li><a>Add Food</a></li>
-                                        <li><a>Manage Foods</a></li>
-                                    </>
-                                )
-                            }
+                            <NavLinks loggedIn={loggedIn} />
                         </ul>
                     </div>
 
@@ -40,17 +34,7 @@ const Navbar = () => {
 
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><Link href='/'>Home</Link></li>
-                        <li><a>All Foods</a></li>
-                        <li><a>About</a></li>
-                        {
-                            loggedIn && (
-                                <>
-                                    <li><a>Add Food</a></li>
-                                    <li><a>Manage Foods</a></li>
-                                </>
-                            )
-                        }
+                        <NavLinks loggedIn={loggedIn} />
                     </ul>
                 </div>
 
@@ -71,10 +55,26 @@ const Navbar = () => {
                         </div>
                     )
                 }
-
             </div>
         </div>
     );
 };
 
 export default Navbar;
+
+const NavLinks = ({ loggedIn }: NavLinksProps) => {
+    return (
+        <>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/TODO">All Foods</Link></li>
+            <li><Link href="/about">About</Link></li>
+
+            {loggedIn && (
+                <>
+                <li><Link href="/TODO">Add Food</Link></li>
+                <li><Link href="/TODO">Manage Foods</Link></li>
+                </>
+            )}
+        </>
+    );
+};

@@ -1,4 +1,5 @@
-import { Button, Card } from "@heroui/react";
+import BrowseFoodsBtn from "@/Components/BrowseFoodsBtn";
+import { Card } from "@heroui/react";
 import { Leaf, Heart, Truck, Users, Utensils, Apple } from "lucide-react";
 
 export default function Hero() {
@@ -48,22 +49,8 @@ export default function Hero() {
                         </p>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <Button
-                                size="lg"
-                                className="bg-[#22C55E] text-white font-semibold px-8 py-6 rounded-xl hover:bg-green-600 transition-colors w-full sm:w-auto"
-                            >
-                                <Utensils className="w-5 h-5 mr-2" />
-                                Order Now
-                            </Button>
-
-                            <Button
-                                size="lg"
-                                variant="outline"
-                                className="border-2 border-gray-300 text-gray-700 font-semibold px-8 py-6 rounded-xl hover:bg-gray-50 transition-colors w-full sm:w-auto"
-                            >
-                                Browse Deals
-                            </Button>
+                        <div >
+                            <BrowseFoodsBtn />
                         </div>
                     </div>
 
