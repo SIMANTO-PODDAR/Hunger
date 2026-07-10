@@ -11,6 +11,7 @@ import {
 import type { Metadata } from "next";
 import BrowseFoodsBtn from '@/Components/BrowseFoodsBtn';
 import WhyChooseHunger from '@/Sections/WhyChooseHunger';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "About | Hunger",
@@ -44,13 +45,13 @@ const AboutPage: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <BrowseFoodsBtn />
-              <a
-                href="#"
+              <Link
+                href="/#Contact"
                 className="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-heading bg-white border border-border rounded-xl hover:bg-gray-50 transition-colors duration-200"
               >
-                Explore Sellers
+                Contact
                 <Users className="ml-2 w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
