@@ -8,7 +8,7 @@ const Navbar = () => {
     const loggedIn = false;
 
     return (
-        <div className="bg-base-100 shadow-md">
+        <div className="bg-base-100 shadow-md z-100 sticky top-0">
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
