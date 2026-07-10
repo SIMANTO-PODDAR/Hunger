@@ -1,6 +1,7 @@
 import Contact from "@/Sections/Contact";
 import FAQ from "@/Sections/FAQ";
 import Hero from "@/Sections/Hero";
+import PrivacyPolicy from "@/Sections/PrivacyPolicy";
 import WhyChooseHunger from "@/Sections/WhyChooseHunger";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <WhyChooseHunger />
       <Contact />
       <FAQ />
+      <PrivacyPolicy />
     </div>
   );
 }

@@ -34,6 +34,7 @@ const Footer = () => {
                         <ul className="space-y-3">
                             {[
                                 { label: "Home", href: "/" },
+                                { label: "About", href: "/about" },
                                 { label: "All Foods", href: "/TODO" },
                                 { label: "Add Food", href: "/TODO" },
                                 { label: "Manage Foods", href: "/TODO" },
@@ -57,10 +58,11 @@ const Footer = () => {
                         </h3>
                         <ul className="space-y-3">
                             {[
-                                { label: "About", href: "/about" },
-                                { label: "Contact", href: "/#Contact" },
                                 { label: "FAQ", href: "/#FAQ" },
-                                { label: "Privacy Policy", href: "/TODO" },
+                                { label: "Contact", href: "/#Contact" },
+                                { label: "Our Outlets", href: "/TODO" },
+                                { label: "Privacy Policy", href: "/#PrivacyPolicy" },
+                                { label: "Trending Meals", href: "/TODO" },
                             ].map((link) => (
                                 <li key={link.label}>
                                     <Link

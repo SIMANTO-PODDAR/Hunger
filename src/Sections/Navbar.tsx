@@ -66,13 +66,13 @@ const NavLinks = ({ loggedIn }: NavLinksProps) => {
     return (
         <>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/TODO">All Foods</Link></li>
             <li><Link href="/about">About</Link></li>
+            <li><Link href="/TODO">All Foods</Link></li>
 
             {loggedIn && (
                 <>
-                <li><Link href="/TODO">Add Food</Link></li>
-                <li><Link href="/TODO">Manage Foods</Link></li>
+                    <li><Link href="/TODO">Add Food</Link></li>
+                    <li><Link href="/TODO">Manage Foods</Link></li>
                 </>
             )}
         </>
