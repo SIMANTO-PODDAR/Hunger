@@ -31,21 +31,20 @@ export default function Hero() {
                         <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2">
                             <Utensils className="w-4 h-4 text-green-600" />
                             <span className="text-sm font-medium text-green-700">
-                                Reduce Food Waste
+                                Limited-Time Deals
                             </span>
                         </div>
 
                         {/* Main Heading */}
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
-                            Share Extra Food,
+                            Fresh Surplus Food,
                             <br />
-                            <span className="text-[#22C55E]">Feed More Lives.</span>
+                            <span className="text-[#22C55E]">At Discounted Prices.</span>
                         </h1>
 
                         {/* Description */}
                         <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                            Connect food donors with people and organizations in need. Reduce food waste
-                            and make every meal count through a simple and trusted donation platform.
+                            Discover discounted meals from your favorite partner restaurants and bakeries. Save food and save money before it goes to waste through our premium food marketplace.
                         </p>
 
                         {/* CTA Buttons */}
@@ -55,7 +54,7 @@ export default function Hero() {
                                 className="bg-[#22C55E] text-white font-semibold px-8 py-6 rounded-xl hover:bg-green-600 transition-colors w-full sm:w-auto"
                             >
                                 <Utensils className="w-5 h-5 mr-2" />
-                                Donate Food
+                                Order Now
                             </Button>
 
                             <Button
@@ -63,7 +62,7 @@ export default function Hero() {
                                 variant="outline"
                                 className="border-2 border-gray-300 text-gray-700 font-semibold px-8 py-6 rounded-xl hover:bg-gray-50 transition-colors w-full sm:w-auto"
                             >
-                                Browse Donations
+                                Browse Deals
                             </Button>
                         </div>
                     </div>
@@ -92,13 +91,13 @@ export default function Hero() {
 
                                     {/* Middle section - People interaction */}
                                     <div className="flex items-center justify-center gap-8 py-6">
-                                        {/* Donor */}
+                                        {/* Donor -> Partner Store */}
                                         <div className="flex flex-col items-center gap-2">
                                             <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center">
                                                 <Users className="w-10 h-10 text-gray-600" />
                                             </div>
                                             <div className="w-16 h-2 bg-gray-200 rounded-full" />
-                                            <div className="text-xs font-medium text-gray-600">Donor</div>
+                                            <div className="text-xs font-medium text-gray-600">Partner Store</div>
                                         </div>
 
                                         {/* Food Box */}
@@ -106,16 +105,16 @@ export default function Hero() {
                                             <div className="w-20 h-20 bg-[#22C55E] bg-opacity-20 rounded-2xl flex items-center justify-center border-2 border-[#22C55E] border-opacity-30">
                                                 <span className="text-3xl">📦</span>
                                             </div>
-                                            <div className="text-xs font-medium text-gray-600">Fresh Food</div>
+                                            <div className="text-xs font-medium text-gray-600">Discounted Meal</div>
                                         </div>
 
-                                        {/* Volunteer */}
+                                        {/* Volunteer -> Happy Shopper */}
                                         <div className="flex flex-col items-center gap-2">
                                             <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center">
                                                 <Heart className="w-10 h-10 text-[#F97316]" />
                                             </div>
                                             <div className="w-16 h-2 bg-gray-200 rounded-full" />
-                                            <div className="text-xs font-medium text-gray-600">Volunteer</div>
+                                            <div className="text-xs font-medium text-gray-600">Happy Shopper</div>
                                         </div>
                                     </div>
 
@@ -123,7 +122,7 @@ export default function Hero() {
                                     <div className="flex justify-center">
                                         <div className="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm border border-gray-100">
                                             <Truck className="w-4 h-4 text-[#22C55E]" />
-                                            <span className="text-sm font-medium text-gray-700">Food Transfer</span>
+                                            <span className="text-sm font-medium text-gray-700">Quick Delivery</span>
                                         </div>
                                     </div>
 
@@ -147,7 +146,7 @@ export default function Hero() {
                         <Card className="p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
                             <div className="space-y-2">
                                 <div className="text-3xl font-bold text-gray-900">12K+</div>
-                                <div className="text-sm text-gray-600">Meals Shared</div>
+                                <div className="text-sm text-gray-600">Discounted Meals</div>
                                 <div className="flex items-center gap-2 pt-2">
                                     <Utensils className="w-4 h-4 text-[#22C55E]" />
                                     <span className="text-xs text-green-600 font-medium">+15% this month</span>
@@ -159,7 +158,7 @@ export default function Hero() {
                         <Card className="p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
                             <div className="space-y-2">
                                 <div className="text-3xl font-bold text-gray-900">350+</div>
-                                <div className="text-sm text-gray-600">Active Donors</div>
+                                <div className="text-sm text-gray-600">Active Shoppers</div>
                                 <div className="flex items-center gap-2 pt-2">
                                     <Users className="w-4 h-4 text-[#22C55E]" />
                                     <span className="text-xs text-green-600 font-medium">Growing community</span>
@@ -171,7 +170,7 @@ export default function Hero() {
                         <Card className="p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
                             <div className="space-y-2">
                                 <div className="text-3xl font-bold text-gray-900">95+</div>
-                                <div className="text-sm text-gray-600">Partner Organizations</div>
+                                <div className="text-sm text-gray-600">Partner Restaurants</div>
                                 <div className="flex items-center gap-2 pt-2">
                                     <Heart className="w-4 h-4 text-[#22C55E]" />
                                     <span className="text-xs text-green-600 font-medium">Across 12 cities</span>
@@ -186,7 +185,7 @@ export default function Hero() {
                                 <div className="text-sm text-gray-600">Food Saved</div>
                                 <div className="flex items-center gap-2 pt-2">
                                     <Leaf className="w-4 h-4 text-[#22C55E]" />
-                                    <span className="text-xs text-green-600 font-medium">Reducing waste</span>
+                                    <span className="text-xs text-green-600 font-medium">Sustainable shopping</span>
                                 </div>
                             </div>
                         </Card>

@@ -4,8 +4,8 @@ import { AiOutlineLogin, AiOutlineLogout } from "react-icons/ai";
 import Link from "next/link";
 
 const Navbar = () => {
-    // const loggedIn = true;
-    const loggedIn = false;
+    const loggedIn = true;
+    // const loggedIn = false;
 
     return (
         <div className="bg-base-100 shadow-md z-100 sticky top-0">
