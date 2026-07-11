@@ -1,5 +1,5 @@
 import BrowseFoodsBtn from '@/Components/BrowseFoodsBtn';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Users } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -39,18 +39,26 @@ const ContactPage: React.FC = () => {
         <section id='Contact' className="w-full bg-white py-5 md:py-10">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-16">
-                    <span className="text-[#22C55E] font-semibold text-sm tracking-wider uppercase">
-                        Contact
-                    </span>
-                    <h2 className="text-4xl sm:text-5xl font-bold text-heading mt-4">
+                <div className="max-w-3xl">
+                    {/* Premium Badge */}
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lightGreen border border-green-100 mb-8">
+                        <Users className="w-4 h-4 text-[#22C55E] fill-[#22C55E]" />
+
+                        <span className="text-sm font-medium text-[#22C55E]">
+                            Contact
+                        </span>
+                    </div>
+
+                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-heading tracking-tight leading-tight mb-6">
                         Let&apos;s Talk
-                    </h2>
-                    <p className="text-body text-lg mt-4 max-w-2xl mx-auto">
+                    </h1>
+
+                    <p className="text-lg sm:text-xl text-body leading-relaxed mb-10 max-w-2xl">
                         Whether you&apos;re a restaurant partner, a delivery driver, or a hungry customer, we&apos;re here to help.
                         Reach out and let&apos;s build a better food experience together.
                     </p>
                 </div>
+
                 {/* Content Grid */}
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
                     {/* Left Side - Contact Information */}

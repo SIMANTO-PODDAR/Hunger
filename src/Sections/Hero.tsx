@@ -22,7 +22,7 @@ export default function Hero() {
             </div>
 
             {/* Main Content Container */}
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-32 lg:pb-24">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-16 lg:pt-10 lg:pb-24">
                 {/* Two Column Grid */}
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
