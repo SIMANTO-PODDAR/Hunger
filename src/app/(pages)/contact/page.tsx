@@ -1,5 +1,10 @@
 import BrowseFoodsBtn from '@/Components/BrowseFoodsBtn';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Contact | Hunger",
+};
 
 const ContactPage: React.FC = () => {
 
