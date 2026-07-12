@@ -16,14 +16,13 @@ type NavLinksProps = {
 };
 
 const Navbar = () => {
-    const { user } = useAuth();
+    const { user, loading } = useAuth();
     const loggedIn = !!user;
 
     const router = useRouter();
     const Logout = async () => {
         try {
             await signOut(auth);
-
             toast.success("Logged out successfully");
             router.push("/");
         }
@@ -44,7 +43,16 @@ const Navbar = () => {
                         <ul
                             tabIndex={-1}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <NavLinks loggedIn={loggedIn} />
+                            {loading ? (
+                                <>
+                                    <li><div className="skeleton h-4 w-24 rounded"></div></li>
+                                    <li><div className="skeleton h-4 w-24 rounded"></div></li>
+                                    <li><div className="skeleton h-4 w-24 rounded"></div></li>
+                                    <li><div className="skeleton h-4 w-24 rounded"></div></li>
+                                </>
+                            ) : (
+                                <NavLinks loggedIn={loggedIn} />
+                            )}
                         </ul>
                     </div>
 
@@ -55,12 +63,28 @@ const Navbar = () => {
 
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <NavLinks loggedIn={loggedIn} />
+                        {loading ? (
+                            <>
+                                <li><div className="skeleton h-4 w-16 rounded"></div></li>
+                                <li><div className="skeleton h-4 w-16 rounded"></div></li>
+                                <li><div className="skeleton h-4 w-16 rounded"></div></li>
+                                <li><div className="skeleton h-4 w-16 rounded"></div></li>
+                            </>
+                        ) : (
+                            <NavLinks loggedIn={loggedIn} />
+                        )}
                     </ul>
                 </div>
 
                 {
-                    loggedIn ? (
+                    loading ? (
+                        <div className="navbar-end">
+                            <div className="flex gap-2 items-center">
+                                <div className="skeleton w-8 h-8 rounded-full"></div>
+                                <div className="skeleton w-20 h-8 rounded"></div>
+                            </div>
+                        </div>
+                    ) : loggedIn ? (
                         <div className="navbar-end gap-2">
                             <Avatar>
                                 <Avatar.Fallback className="bg-green-50 border border-green-300 rounded-full text-green-700">
