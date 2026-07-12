@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
 import { Button } from '@heroui/react';
+import Link from 'next/link';
 
 interface Food {
     id: string;
@@ -59,11 +60,14 @@ const FoodCard: React.FC<FoodCardProps> = ({ food }) => {
                     <span className="text-2xl font-bold text-[#22C55E]">
                         ${food.price.toFixed(2)}
                     </span>
-                    <Button
-                        className="bg-[#22C55E] hover:bg-[#16A34A] text-white font-medium text-sm px-4 py-2 h-auto rounded-xl transition-colors duration-200"
-                    >
-                        View Details <ArrowRight className="h-4 w-4" />
-                    </Button>
+
+                    <Link href={`/all-foods/${food.id}`}>
+                        <Button
+                            className="bg-[#22C55E] hover:bg-[#16A34A] text-white font-medium text-sm px-4 py-2 h-auto rounded-xl transition-colors duration-200"
+                        >
+                            View Details <ArrowRight className="h-4 w-4" />
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>
