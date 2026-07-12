@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Star, CheckCircle } from 'lucide-react';
 import ImageGallery from '@/Components/ImageGallery';
+import AlsoLike from '@/Components/AlsoLike';
 
 interface Food {
     id: string;
@@ -140,6 +141,9 @@ export default async function FoodDetailPage({
                         </button>
                     </div>
                 </section>
+
+                {/* ========== YOU MAY ALSO LIKE ========== */}
+                <AlsoLike category={category} currentId={id} />
             </div>
         </main>
     );
