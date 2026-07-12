@@ -30,7 +30,8 @@ async function getRelatedFoods(category: string, excludeId: string): Promise<Foo
     );
 
     if (!res.ok) return [];
-    return res.json();
+    const data = await res.json();
+    return data.foods ?? [];
 }
 
 export default async function AlsoLike({ category, currentId }: Props) {
