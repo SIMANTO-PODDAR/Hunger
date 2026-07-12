@@ -6,17 +6,17 @@ import Link from "next/link";
 import toast from "react-hot-toast";
 
 import { signOut } from "firebase/auth";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@/app/firebase";
 import { useRouter } from "next/navigation";
 import { Avatar } from "@heroui/react";
+import { useAuth } from "@/context/AuthContext";
 
 type NavLinksProps = {
     loggedIn: boolean;
 };
 
 const Navbar = () => {
-    const [user] = useAuthState(auth);
+    const { user } = useAuth();
     const loggedIn = !!user;
 
     const router = useRouter();
@@ -99,7 +99,7 @@ const NavLinks = ({ loggedIn }: NavLinksProps) => {
 
             {loggedIn && (
                 <>
-                    <li><Link href="/TODO">Add Food</Link></li>
+                    <li><Link href="/add-food">Add Food</Link></li>
                     <li><Link href="/TODO">Manage Foods</Link></li>
                 </>
             )}

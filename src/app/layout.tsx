@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/Sections/Footer";
 import Navbar from "@/Sections/Navbar";
+import { AuthProvider } from "@/context/AuthContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,13 +32,17 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        <div className="container mx-auto">
-          {children}
-        </div>
-        <Footer />
+        <AuthProvider>
 
-        <Toaster />
+          <Navbar />
+          <div className="container mx-auto">
+            {children}
+          </div>
+          <Footer />
+
+          <Toaster />
+
+        </AuthProvider>
       </body>
     </html>
   );

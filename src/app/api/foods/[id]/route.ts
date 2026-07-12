@@ -27,8 +27,6 @@ export async function GET(_: Request, { params }: Props) {
             ...docSnap.data(),
         });
     } catch (error) {
-        console.error(error);
-
         return NextResponse.json(
             { message: "Failed to fetch food" },
             { status: 500 }
