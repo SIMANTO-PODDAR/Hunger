@@ -1,4 +1,5 @@
-import { foods } from "@/data/foods";
+import { db } from "@/app/firebase";
+import { doc, getDoc } from "firebase/firestore";
 import { NextResponse } from "next/server";
 
 type Props = {
@@ -10,14 +11,27 @@ type Props = {
 export async function GET(_: Request, { params }: Props) {
     const { id } = await params;
 
-    const food = foods.find((item) => item.id === id);
+    try {
+        const docRef = doc(db, "foods", id);
+        const docSnap = await getDoc(docRef);
 
-    if (!food) {
+        if (!docSnap.exists()) {
+            return NextResponse.json(
+                { message: "Food not found" },
+                { status: 404 }
+            );
+        }
+
+        return NextResponse.json({
+            id: docSnap.id,
+            ...docSnap.data(),
+        });
+    } catch (error) {
+        console.error(error);
+
         return NextResponse.json(
-            { message: "Food not found" },
-            { status: 404 }
+            { message: "Failed to fetch food" },
+            { status: 500 }
         );
     }
-
-    return NextResponse.json(food);
 }

@@ -1,6 +1,5 @@
 export const foods = [
     {
-        id: "1",
         name: "Margherita Pizza",
         category: "Pizza",
         price: 12.99,
@@ -18,7 +17,6 @@ export const foods = [
         ],
     },
     {
-        id: "2",
         name: "Grilled Chicken Breast",
         category: "Chicken",
         price: 23.99,
@@ -36,7 +34,6 @@ export const foods = [
         ],
     },
     {
-        id: "3",
         name: "Lemon Herb Salmon",
         category: "Seafood",
         price: 34.99,
@@ -54,7 +51,6 @@ export const foods = [
         ],
     },
     {
-        id: "4",
         name: "Shrimp Scampi",
         category: "Seafood",
         price: 18.99,
@@ -72,7 +68,6 @@ export const foods = [
         ],
     },
     {
-        id: "5",
         name: "Mango Sticky Rice",
         category: "Desserts",
         price: 17.99,
@@ -90,7 +85,6 @@ export const foods = [
         ],
     },
     {
-        id: "6",
         name: "BBQ Chicken Pizza",
         category: "Pizza",
         price: 35.99,
@@ -108,7 +102,6 @@ export const foods = [
         ],
     },
     {
-        id: "7",
         name: "Honey Garlic Chicken Wings",
         category: "Chicken",
         price: 17.99,
@@ -126,7 +119,6 @@ export const foods = [
         ],
     },
     {
-        id: "8",
         name: "Coconut Shrimp",
         category: "Seafood",
         price: 24.99,
@@ -144,7 +136,6 @@ export const foods = [
         ],
     },
     {
-        id: "9",
         name: "Mediterranean Veggie Pizza",
         category: "Pizza",
         price: 22.49,
@@ -162,7 +153,6 @@ export const foods = [
         ],
     },
     {
-        id: "10",
         name: "Chicken Tikka Masala",
         category: "Chicken",
         price: 28.49,
@@ -180,7 +170,6 @@ export const foods = [
         ],
     },
     {
-        id: "11",
         name: "Chocolate Lava Cake",
         category: "Desserts",
         price: 13.99,
@@ -198,7 +187,6 @@ export const foods = [
         ],
     },
     {
-        id: "12",
         name: "New York Cheesecake",
         category: "Desserts",
         price: 19.99,

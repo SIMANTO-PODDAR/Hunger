@@ -1,4 +1,5 @@
-import { foods } from "@/data/foods";
+import { db } from "@/app/firebase";
+import { collection, getDocs } from "firebase/firestore";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
@@ -12,7 +13,14 @@ export async function GET(request: NextRequest) {
     const page = parseInt(searchParams.get("page") ?? "1", 10);
     const limit = parseInt(searchParams.get("limit") ?? "8", 10);
 
-    let result = foods.filter((food) => {
+    const snapshot = await getDocs(collection(db, "foods"));
+
+    let result = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+    })) as any[];
+
+    result = result.filter((food) => {
         if (search) {
             return food.name.toLowerCase().includes(search.toLowerCase());
         }
@@ -42,15 +50,16 @@ export async function GET(request: NextRequest) {
     }
 
     if (sort === "price_asc") {
-        result = [...result].sort((a, b) => a.price - b.price);
+        result.sort((a, b) => a.price - b.price);
     } else if (sort === "price_desc") {
-        result = [...result].sort((a, b) => b.price - a.price);
+        result.sort((a, b) => b.price - a.price);
     }
 
     const totalFoods = result.length;
     const totalPages = Math.max(1, Math.ceil(totalFoods / limit));
     const safePage = Math.min(Math.max(1, page), totalPages);
     const startIndex = (safePage - 1) * limit;
+
     const paginatedFoods = result.slice(startIndex, startIndex + limit);
 
     return NextResponse.json({
