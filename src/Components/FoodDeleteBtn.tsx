@@ -1,30 +1,47 @@
 "use client";
 
-import { doc, deleteDoc } from "firebase/firestore";
-import { db } from "@/app/firebase";
+import { useAuth } from "@/context/AuthContext";
 import { AlertDialog, Button } from "@heroui/react";
 import toast from "react-hot-toast";
-import { MdDeleteForever } from "react-icons/md";
+import { MdDeleteForever, MdNoMealsOuline } from "react-icons/md";
 
 type Props = {
     foodId: string;
     foodName: string;
     page: "allFoods" | "manageFoods" | "alsoLike";
+    userId?: string;
 };
 
 export default function FoodDeleteBtn({
     foodId,
     foodName,
     page,
+    userId
 }: Props) {
 
+    const { user } = useAuth();
     if (page === "allFoods" || page === "alsoLike") return null;
 
     const deleteFood = async () => {
         const loadingToast = toast.loading("Deleting food...");
 
+        const uid = user?.uid;
+
+        if (!userId || userId !== uid) {
+            toast.error("Unauthorized user", {
+                id: loadingToast,
+            });
+            return;
+        }
+
         try {
-            await deleteDoc(doc(db, "foods", foodId));
+            const res = await fetch(`/api/manage-foods/${foodId}`, {
+                method: "DELETE",
+            });
+
+            if (!res.ok) {
+                throw new Error("Delete failed");
+            }
 
             toast.success("Food deleted successfully!", {
                 id: loadingToast,
@@ -57,7 +74,7 @@ export default function FoodDeleteBtn({
                         <AlertDialog.CloseTrigger />
 
                         <AlertDialog.Header>
-                            <MdDeleteForever className="text-3xl" />
+                            <MdNoMealsOuline className="text-3xl" />
 
                             <AlertDialog.Heading>
                                 <p className="text-danger font-bold text-lg">

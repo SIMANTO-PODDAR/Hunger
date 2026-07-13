@@ -19,6 +19,7 @@ interface Food {
     description: string;
     images: string[];
     keyInformation: string[];
+    userId: string;
 }
 
 interface ApiResponse {

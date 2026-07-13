@@ -13,6 +13,7 @@ interface Food {
     description: string;
     images: string[];
     keyInformation: string[];
+    userId?: string;
 }
 
 interface FoodCardProps {
@@ -76,6 +77,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ food, page }) => {
                     foodId={food.id}
                     foodName={food.name}
                     page={page}
+                    userId={food.userId}
                 />
             </div>
         </div>
