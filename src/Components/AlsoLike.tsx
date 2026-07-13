@@ -47,7 +47,7 @@ export default async function AlsoLike({ category, currentId }: Props) {
             </p>
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {foods.map((food) => (
-                    <FoodCard key={food.id} food={food} />
+                    <FoodCard key={food.id} food={food} page='alsoLike'/>
                 ))}
             </div>
         </section>

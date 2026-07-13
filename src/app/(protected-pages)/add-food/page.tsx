@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import { Utensils, FileText, Info, Upload, Check, X } from "lucide-react";
 import toast from "react-hot-toast";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { db } from "@/app/firebase";
 import { useAuth } from "@/context/AuthContext";
 import { BiAddToQueue } from "react-icons/bi";
@@ -131,6 +131,7 @@ const AddFoodPage = () => {
             images: imageUrl ? [imageUrl] : ["https://i.ibb.co.com/DHNkGn82/food-image-placeholder.png"],
             keyInformation,
             userId: user.uid,
+            createdAt: Timestamp.now(),
         };
 
         const loadingToast = toast.loading("Adding food...");

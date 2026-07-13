@@ -2,6 +2,7 @@ import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
 import { Button } from '@heroui/react';
 import Link from 'next/link';
+import FoodDeleteBtn from './FoodDeleteBtn';
 
 interface Food {
     id: string;
@@ -16,9 +17,10 @@ interface Food {
 
 interface FoodCardProps {
     food: Food;
+    page: "allFoods" | "manageFoods" | "alsoLike";
 }
 
-const FoodCard: React.FC<FoodCardProps> = ({ food }) => {
+const FoodCard: React.FC<FoodCardProps> = ({ food, page }) => {
     const imageUrl = food.images[0];
 
     return (
@@ -69,6 +71,12 @@ const FoodCard: React.FC<FoodCardProps> = ({ food }) => {
                         </Button>
                     </Link>
                 </div>
+
+                <FoodDeleteBtn
+                    foodId={food.id}
+                    foodName={food.name}
+                    page={page}
+                />
             </div>
         </div>
     );

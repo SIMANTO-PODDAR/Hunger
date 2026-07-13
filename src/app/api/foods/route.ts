@@ -1,5 +1,5 @@
 import { db } from "@/app/firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
@@ -13,7 +13,12 @@ export async function GET(request: NextRequest) {
     const page = parseInt(searchParams.get("page") ?? "1", 10);
     const limit = parseInt(searchParams.get("limit") ?? "8", 10);
 
-    const snapshot = await getDocs(collection(db, "foods"));
+    const q = query(
+        collection(db, "foods"),
+        orderBy("createdAt", "asc")
+    );
+
+    const snapshot = await getDocs(q);
 
     let result = snapshot.docs.map((doc) => ({
         id: doc.id,
