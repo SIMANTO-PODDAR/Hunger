@@ -20,11 +20,12 @@ const CATEGORIES = [
     { label: "Seafood", value: "Seafood" },
     { label: "Chicken", value: "Chicken" },
     { label: "Pizza", value: "Pizza" },
+    { label: "Others", value: "Others" },
 ];
 
 const PRICES = [
     { label: "All Prices", value: "" },
-    { label: "$10 - $19.99", value: "10-19.99" },
+    { label: "$1 - $19.99", value: "1-19.99" },
     { label: "$20 - $29.99", value: "20-29.99" },
     { label: "$30 - $49.99", value: "30-49.99" },
     { label: "$50+", value: "50-1000000" },
