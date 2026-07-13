@@ -124,7 +124,7 @@ const NavLinks = ({ loggedIn }: NavLinksProps) => {
             {loggedIn && (
                 <>
                     <li><Link href="/add-food">Add Food</Link></li>
-                    <li><Link href="/TODO">Manage Foods</Link></li>
+                    <li><Link href="/manage-foods">Manage Foods</Link></li>
                 </>
             )}
         </>
