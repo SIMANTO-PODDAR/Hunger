@@ -37,7 +37,7 @@ export default function Hero() {
                         </div>
 
                         {/* Main Heading */}
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
+                        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
                             Fresh Surplus Food,
                             <br />
                             <span className="text-[#22C55E]">At Discounted Prices.</span>
@@ -58,50 +58,50 @@ export default function Hero() {
                     <div className="relative flex items-center justify-center">
                         <div className="w-full max-w-md lg:max-w-lg">
                             {/* Clean flat illustration using simple shapes */}
-                            <div className="relative bg-linear-to-br from-green-50 to-orange-50 rounded-3xl p-8 border border-gray-100">
+                            <div className="relative bg-linear-to-br from-green-50 to-orange-50 rounded-3xl p-4 sm:p-8 border border-gray-100">
 
                                 {/* Illustration Elements */}
                                 <div className="space-y-6">
 
                                     {/* Top section - Fruits */}
-                                    <div className="flex justify-center gap-4">
-                                        <div className="w-16 h-16 bg-orange-200 rounded-2xl flex items-center justify-center transform -rotate-6">
-                                            <span className="text-3xl">🍊</span>
+                                    <div className="flex justify-center gap-3 sm:gap-4">
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-orange-200 rounded-2xl flex items-center justify-center transform -rotate-6 shrink-0">
+                                            <span className="text-2xl sm:text-3xl">🍊</span>
                                         </div>
-                                        <div className="w-16 h-16 bg-green-200 rounded-2xl flex items-center justify-center transform rotate-6">
-                                            <span className="text-3xl">🥬</span>
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-200 rounded-2xl flex items-center justify-center transform rotate-6 shrink-0">
+                                            <span className="text-2xl sm:text-3xl">🥬</span>
                                         </div>
-                                        <div className="w-16 h-16 bg-red-200 rounded-2xl flex items-center justify-center transform -rotate-3">
-                                            <span className="text-3xl">🍎</span>
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-200 rounded-2xl flex items-center justify-center transform -rotate-3 shrink-0">
+                                            <span className="text-2xl sm:text-3xl">🍎</span>
                                         </div>
                                     </div>
 
                                     {/* Middle section - People interaction */}
-                                    <div className="flex items-center justify-center gap-8 py-6">
+                                    <div className="flex items-center justify-center gap-2 sm:gap-8 py-4 sm:py-6">
                                         {/* Donor -> Partner Store */}
-                                        <div className="flex flex-col items-center gap-2">
-                                            <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center">
-                                                <Users className="w-10 h-10 text-gray-600" />
+                                        <div className="flex flex-col items-center gap-1.5 sm:gap-2 min-w-0">
+                                            <div className="w-14 h-14 sm:w-20 sm:h-20 bg-gray-200 rounded-full flex items-center justify-center shrink-0">
+                                                <Users className="w-6 h-6 sm:w-10 sm:h-10 text-gray-600" />
                                             </div>
-                                            <div className="w-16 h-2 bg-gray-200 rounded-full" />
-                                            <div className="text-xs font-medium text-gray-600">Partner Store</div>
+                                            <div className="w-10 sm:w-16 h-1.5 sm:h-2 bg-gray-200 rounded-full" />
+                                            <div className="text-[10px] sm:text-xs font-medium text-gray-600 text-center leading-tight">Partner Store</div>
                                         </div>
 
                                         {/* Food Box */}
-                                        <div className="flex flex-col items-center gap-2">
-                                            <div className="w-20 h-20 bg-[#22C55E] bg-opacity-20 rounded-2xl flex items-center justify-center border-2 border-[#22C55E] border-opacity-30">
-                                                <span className="text-3xl">📦</span>
+                                        <div className="flex flex-col items-center gap-1.5 sm:gap-2 min-w-0">
+                                            <div className="w-14 h-14 sm:w-20 sm:h-20 bg-[#22C55E] bg-opacity-20 rounded-2xl flex items-center justify-center border-2 border-[#22C55E] border-opacity-30 shrink-0">
+                                                <span className="text-2xl sm:text-3xl">📦</span>
                                             </div>
-                                            <div className="text-xs font-medium text-gray-600">Discounted Meal</div>
+                                            <div className="text-[10px] sm:text-xs font-medium text-gray-600 text-center leading-tight">Discounted Meal</div>
                                         </div>
 
                                         {/* Volunteer -> Happy Shopper */}
-                                        <div className="flex flex-col items-center gap-2">
-                                            <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center">
-                                                <Heart className="w-10 h-10 text-[#F97316]" />
+                                        <div className="flex flex-col items-center gap-1.5 sm:gap-2 min-w-0">
+                                            <div className="w-14 h-14 sm:w-20 sm:h-20 bg-gray-200 rounded-full flex items-center justify-center shrink-0">
+                                                <Heart className="w-6 h-6 sm:w-10 sm:h-10 text-[#F97316]" />
                                             </div>
-                                            <div className="w-16 h-2 bg-gray-200 rounded-full" />
-                                            <div className="text-xs font-medium text-gray-600">Happy Shopper</div>
+                                            <div className="w-10 sm:w-16 h-1.5 sm:h-2 bg-gray-200 rounded-full" />
+                                            <div className="text-[10px] sm:text-xs font-medium text-gray-600 text-center leading-tight">Happy Shopper</div>
                                         </div>
                                     </div>
 
@@ -126,53 +126,53 @@ export default function Hero() {
                 </div>
 
                 {/* Bottom Statistics Section */}
-                <div className="mt-24 lg:mt-32">
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div className="mt-16 sm:mt-24 lg:mt-32">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
 
                         {/* Stat Card 1 */}
-                        <Card className="p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                        <Card className="p-4 sm:p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
                             <div className="space-y-2">
-                                <div className="text-3xl font-bold text-gray-900">12K+</div>
-                                <div className="text-sm text-gray-600">Discounted Meals</div>
-                                <div className="flex items-center gap-2 pt-2">
-                                    <Utensils className="w-4 h-4 text-[#22C55E]" />
-                                    <span className="text-xs text-green-600 font-medium">+15% this month</span>
+                                <div className="text-2xl sm:text-3xl font-bold text-gray-900">12K+</div>
+                                <div className="text-xs sm:text-sm text-gray-600">Discounted Meals</div>
+                                <div className="flex items-center gap-1.5 sm:gap-2 pt-2 flex-wrap">
+                                    <Utensils className="w-4 h-4 text-[#22C55E] shrink-0" />
+                                    <span className="text-[10px] sm:text-xs text-green-600 font-medium">+15% this month</span>
                                 </div>
                             </div>
                         </Card>
 
                         {/* Stat Card 2 */}
-                        <Card className="p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                        <Card className="p-4 sm:p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
                             <div className="space-y-2">
-                                <div className="text-3xl font-bold text-gray-900">350+</div>
-                                <div className="text-sm text-gray-600">Active Shoppers</div>
-                                <div className="flex items-center gap-2 pt-2">
-                                    <Users className="w-4 h-4 text-[#22C55E]" />
-                                    <span className="text-xs text-green-600 font-medium">Growing community</span>
+                                <div className="text-2xl sm:text-3xl font-bold text-gray-900">350+</div>
+                                <div className="text-xs sm:text-sm text-gray-600">Active Shoppers</div>
+                                <div className="flex items-center gap-1.5 sm:gap-2 pt-2 flex-wrap">
+                                    <Users className="w-4 h-4 text-[#22C55E] shrink-0" />
+                                    <span className="text-[10px] sm:text-xs text-green-600 font-medium">Growing community</span>
                                 </div>
                             </div>
                         </Card>
 
                         {/* Stat Card 3 */}
-                        <Card className="p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                        <Card className="p-4 sm:p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
                             <div className="space-y-2">
-                                <div className="text-3xl font-bold text-gray-900">95+</div>
-                                <div className="text-sm text-gray-600">Partner Restaurants</div>
-                                <div className="flex items-center gap-2 pt-2">
-                                    <Heart className="w-4 h-4 text-[#22C55E]" />
-                                    <span className="text-xs text-green-600 font-medium">Across 12 cities</span>
+                                <div className="text-2xl sm:text-3xl font-bold text-gray-900">95+</div>
+                                <div className="text-xs sm:text-sm text-gray-600">Partner Restaurants</div>
+                                <div className="flex items-center gap-1.5 sm:gap-2 pt-2 flex-wrap">
+                                    <Heart className="w-4 h-4 text-[#22C55E] shrink-0" />
+                                    <span className="text-[10px] sm:text-xs text-green-600 font-medium">Across 12 cities</span>
                                 </div>
                             </div>
                         </Card>
 
                         {/* Stat Card 4 */}
-                        <Card className="p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                        <Card className="p-4 sm:p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
                             <div className="space-y-2">
-                                <div className="text-3xl font-bold text-gray-900">2.5 Tons</div>
-                                <div className="text-sm text-gray-600">Food Saved</div>
-                                <div className="flex items-center gap-2 pt-2">
-                                    <Leaf className="w-4 h-4 text-[#22C55E]" />
-                                    <span className="text-xs text-green-600 font-medium">Sustainable shopping</span>
+                                <div className="text-2xl sm:text-3xl font-bold text-gray-900">2.5 Tons</div>
+                                <div className="text-xs sm:text-sm text-gray-600">Food Saved</div>
+                                <div className="flex items-center gap-1.5 sm:gap-2 pt-2 flex-wrap">
+                                    <Leaf className="w-4 h-4 text-[#22C55E] shrink-0" />
+                                    <span className="text-[10px] sm:text-xs text-green-600 font-medium">Sustainable shopping</span>
                                 </div>
                             </div>
                         </Card>
