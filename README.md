@@ -33,6 +33,20 @@ This project is deployed on **Vercel** with automatic CI/CD from the `main` bran
 
 ---
 
+<div align="center">
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td valign="top" width="60%">
+        <img src="https://i.ibb.co.com/vCSRtYMc/Hunger-desktop-view.jpg" alt="Hunger Desktop View" width="100%" style="border-radius: 8px;" />
+      </td>
+      <td valign="top" width="35%">
+        <img src="https://i.ibb.co.com/pB6BLKxK/Hunger-mobile-view.jpg" alt="Hunger Mobile View" width="100%" style="border-radius: 8px;" />
+      </td>
+    </tr>
+  </table>
+</div>
+<br />
+
 ## ✨ Key Features
 
 ### 🏠 1. Interactive Landing Page & Dashboard
