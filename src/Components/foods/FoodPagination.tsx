@@ -1,12 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-interface FoodPaginationProps {
-    currentPage: number;
-    totalPages: number;
-    onPageChange: (page: number) => void;
-}
+import { FoodPaginationProps } from '@/types/modules';
 
 export default function FoodPagination({
     currentPage,

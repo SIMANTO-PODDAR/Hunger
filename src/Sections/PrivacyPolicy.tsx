@@ -1,10 +1,6 @@
 import React from 'react';
 import { ShieldCheck } from 'lucide-react';
-
-interface PrivacyPoint {
-    id: number;
-    text: string;
-}
+import { PrivacyPoint } from '@/types/modules';
 
 const PrivacyPolicy: React.FC = () => {
     const privacyPoints: PrivacyPoint[] = [

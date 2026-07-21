@@ -4,20 +4,14 @@ import { useAuth } from "@/context/AuthContext";
 import { AlertDialog, Button } from "@heroui/react";
 import toast from "react-hot-toast";
 import { MdDeleteForever, MdNoMealsOuline } from "react-icons/md";
-
-type Props = {
-    foodId: string;
-    foodName: string;
-    page: "allFoods" | "manageFoods" | "alsoLike";
-    userId?: string;
-};
+import { FoodDeleteBtnProps } from '@/types/modules';
 
 export default function FoodDeleteBtn({
     foodId,
     foodName,
     page,
     userId
-}: Props) {
+}: FoodDeleteBtnProps) {
 
     const { user } = useAuth();
     if (page === "allFoods" || page === "alsoLike") return null;

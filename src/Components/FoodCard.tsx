@@ -2,24 +2,8 @@ import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
 import { Button } from '@heroui/react';
 import Link from 'next/link';
-import FoodDeleteBtn from './FoodDeleteBtn';
-
-interface Food {
-    id: string;
-    name: string;
-    category: string;
-    price: number;
-    rating: number;
-    description: string;
-    images: string[];
-    keyInformation: string[];
-    userId?: string;
-}
-
-interface FoodCardProps {
-    food: Food;
-    page: "allFoods" | "manageFoods" | "alsoLike";
-}
+import FoodDeleteBtn from './FoodDeleteBtn'; 
+import { FoodCardProps } from '@/types/modules';
 
 const FoodCard: React.FC<FoodCardProps> = ({ food, page }) => {
     const imageUrl = food.images[0];

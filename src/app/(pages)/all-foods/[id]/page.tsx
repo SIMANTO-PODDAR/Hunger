@@ -4,17 +4,7 @@ import Link from 'next/link';
 import { Star, CheckCircle } from 'lucide-react';
 import ImageGallery from '@/Components/ImageGallery';
 import AlsoLike from '@/Components/AlsoLike';
-
-interface Food {
-    id: string;
-    name: string;
-    category: string;
-    price: number;
-    rating: number;
-    description: string;
-    images: string[];
-    keyInformation: string[];
-}
+import { Food } from '@/types/shared';
 
 async function getFood(id: string): Promise<Food> {
     const headersList = await headers();

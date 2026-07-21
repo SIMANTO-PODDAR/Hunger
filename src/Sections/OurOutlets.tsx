@@ -1,19 +1,11 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { MapPin, Clock, Navigation } from "lucide-react";
 
 import SantoriniSeasideOutlet from "../../public/Santorini-Seaside-Outlet.jpg";
 import TimesSquareOutlet from "../../public/Times-Square-Outlet.jpeg";
 import MarinaBayDining from "../../public/Marina-Bay-Dining.jpg";
-
-interface Outlet {
-    image: StaticImageData;
-    title: string;
-    description: string;
-    location: string;
-    hours: string;
-    badges: string[];
-}
+import { Outlet } from '@/types/modules';
 
 const outlets: Outlet[] = [
     {

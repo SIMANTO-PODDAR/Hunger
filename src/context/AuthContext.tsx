@@ -9,10 +9,7 @@ import {
 } from "react";
 import { User, onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/app/firebase";
-type AuthContextType = {
-    user: User | null;
-    loading: boolean;
-};
+import { AuthContextType } from '@/types/modules';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 

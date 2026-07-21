@@ -2,11 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-interface ImageGalleryProps {
-    images: string[];
-    name: string;
-}
+import { ImageGalleryProps } from '@/types/modules';
 
 export default function ImageGallery({ images, name }: ImageGalleryProps) {
     const [currentIndex, setCurrentIndex] = useState(0);

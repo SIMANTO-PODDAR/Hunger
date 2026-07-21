@@ -8,44 +8,9 @@ import { Button } from "@heroui/react";
 import FoodCard from "@/Components/FoodCard";
 import FoodPagination from "@/Components/foods/FoodPagination";
 import FoodCardSkeleton from "@/Components/foods/FoodCardSkeleton";
-import { useAuth } from "@/context/AuthContext"; // adjust path as needed
-
-interface Food {
-    id: string;
-    name: string;
-    category: string;
-    price: number;
-    rating: number;
-    description: string;
-    images: string[];
-    keyInformation: string[];
-    userId: string;
-}
-
-interface ApiResponse {
-    foods: Food[];
-    totalFoods: number;
-    totalPages: number;
-    currentPage: number;
-}
-
-type FetchState = {
-    foods: Food[];
-    totalPages: number;
-    totalFoods: number;
-    loading: boolean;
-    error: string | null;
-};
-
-type FetchAction =
-    | { type: "FETCH_START" }
-    | {
-        type: "FETCH_SUCCESS";
-        foods: Food[];
-        totalPages: number;
-        totalFoods: number;
-    }
-    | { type: "FETCH_ERROR"; error: string };
+import { useAuth } from "@/context/AuthContext";
+import { ApiResponse } from "@/types/shared";
+import { FetchState, FetchAction } from '@/types/modules';
 
 function fetchReducer(state: FetchState, action: FetchAction): FetchState {
     switch (action.type) {

@@ -1,12 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
-
-interface FaqItem {
-    id: number;
-    question: string;
-    answer: string;
-}
+import { FaqItem } from '@/types/modules';
 
 const FAQ: React.FC = () => {
     const [openId, setOpenId] = useState<number | null>(null);

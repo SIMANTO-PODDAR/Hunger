@@ -1,24 +1,9 @@
 import { headers } from 'next/headers';
 import FoodCard from '@/Components/FoodCard';
+import { FoodWithRelated } from '@/types/shared';
+import { AlsoLikeProps } from '@/types/modules';
 
-interface Food {
-    id: string;
-    name: string;
-    category: string;
-    price: number;
-    rating: number;
-    description: string;
-    images: string[];
-    keyInformation: string[];
-    relatedItems: string[];
-}
-
-type Props = {
-    category: string;
-    currentId: string;
-};
-
-async function getRelatedFoods(category: string, excludeId: string): Promise<Food[]> {
+async function getRelatedFoods(category: string, excludeId: string): Promise<FoodWithRelated[]> {
     const headersList = await headers();
     const host = headersList.get('host');
     const protocol = headersList.get('x-forwarded-proto') || 'http';
@@ -34,7 +19,7 @@ async function getRelatedFoods(category: string, excludeId: string): Promise<Foo
     return data.foods ?? [];
 }
 
-export default async function AlsoLike({ category, currentId }: Props) {
+export default async function AlsoLike({ category, currentId }: AlsoLikeProps) {
     const foods = await getRelatedFoods(category, currentId);
 
     if (!foods || foods.length === 0) return null;

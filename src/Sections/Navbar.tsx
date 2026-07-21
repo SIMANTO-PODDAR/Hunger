@@ -10,10 +10,7 @@ import { auth } from "@/app/firebase";
 import { useRouter } from "next/navigation";
 import { Avatar } from "@heroui/react";
 import { useAuth } from "@/context/AuthContext";
-
-type NavLinksProps = {
-    loggedIn: boolean;
-};
+import { NavLinksProps } from '@/types/modules';
 
 const Navbar = () => {
     const { user, loading } = useAuth();

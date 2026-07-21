@@ -5,29 +5,12 @@ import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { MdOutlineMenuBook } from "react-icons/md";
 
 import FoodCard from "@/Components/FoodCard";
-import FoodFilters, { type FilterState } from "@/Components/foods/FoodFilters";
+import FoodFilters from "@/Components/foods/FoodFilters";
 import FoodPagination from "@/Components/foods/FoodPagination";
 import FoodCardSkeleton from "@/Components/foods/FoodCardSkeleton";
 import Link from "next/link";
 import { Button } from "@heroui/react";
-
-interface Food {
-    id: string;
-    name: string;
-    category: string;
-    price: number;
-    rating: number;
-    description: string;
-    images: string[];
-    keyInformation: string[];
-}
-
-interface ApiResponse {
-    foods: Food[];
-    totalFoods: number;
-    totalPages: number;
-    currentPage: number;
-}
+import { ApiResponse, FilterState, Food } from "@/types/shared";
 
 const LIMIT = 8;
 const DEBOUNCE_MS = 350;

@@ -1,18 +1,7 @@
 "use client";
 
 import { Search } from "lucide-react";
-
-export interface FilterState {
-    search: string;
-    category: string;
-    price: string;
-    sort: string;
-}
-
-interface FoodFiltersProps {
-    filters: FilterState;
-    onChange: (updated: Partial<FilterState>) => void;
-}
+import { FoodFiltersProps } from '@/types/modules';
 
 const CATEGORIES = [
     { label: "All Categories", value: "" },
