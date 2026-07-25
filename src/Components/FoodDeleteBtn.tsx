@@ -5,6 +5,8 @@ import { AlertDialog, Button } from "@heroui/react";
 import toast from "react-hot-toast";
 import { MdDeleteForever, MdNoMealsOuline } from "react-icons/md";
 import { FoodDeleteBtnProps } from '@/types/modules';
+import { db } from "@/app/firebase";
+import { deleteDoc, doc } from "firebase/firestore";
 
 export default function FoodDeleteBtn({
     foodId,
@@ -29,13 +31,7 @@ export default function FoodDeleteBtn({
         }
 
         try {
-            const res = await fetch(`/api/manage-foods/${foodId}`, {
-                method: "DELETE",
-            });
-
-            if (!res.ok) {
-                throw new Error("Delete failed");
-            }
+            await deleteDoc(doc(db, "foods", foodId));
 
             toast.success("Food deleted successfully!", {
                 id: loadingToast,
