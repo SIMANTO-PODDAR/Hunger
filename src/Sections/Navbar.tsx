@@ -83,11 +83,13 @@ const Navbar = () => {
                         </div>
                     ) : loggedIn ? (
                         <div className="navbar-end gap-2">
-                            <Avatar>
-                                <Avatar.Fallback className="bg-green-50 border border-green-300 rounded-full text-green-700">
-                                    {(user?.displayName?.charAt(0) || "U").toUpperCase()}
-                                </Avatar.Fallback>
-                            </Avatar>
+                            <Link href={'/profile'}>
+                                <Avatar>
+                                    <Avatar.Fallback className="bg-green-50 border border-green-300 rounded-full text-green-700">
+                                        {(user?.displayName?.charAt(0) || "U").toUpperCase()}
+                                    </Avatar.Fallback>
+                                </Avatar>
+                            </Link>
                             <button onClick={Logout}
                                 className="btn btn-sm btn-error font-bold text-white flex gap-2 items-center" >
                                 Logout
@@ -120,6 +122,7 @@ const NavLinks = ({ loggedIn }: NavLinksProps) => {
 
             {loggedIn && (
                 <>
+                    <li><Link href="/profile">Profile</Link></li>
                     <li><Link href="/add-food">Add Food</Link></li>
                     <li><Link href="/manage-foods">Manage Foods</Link></li>
                 </>
